@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
+  int _cirecleAvatarValue = 2;
 
   List<IconData> _icons = [
     FontAwesomeIcons.plane,
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         setState(() {
           _selectedIndex = index;
         });
-        print('Tapped Icon with this index: $index');
+        print('Icon index: $index');
       },
       child: Container(
         height: 60.0,
@@ -107,7 +108,9 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 17,
-              backgroundColor: Theme.of(context).primaryColor,
+              backgroundColor: _currentTab == _cirecleAvatarValue
+                  ? Theme.of(context).primaryColor
+                  : Colors.white,
               child: CircleAvatar(
                 radius: 15.0,
                 backgroundImage: AssetImage('assets/images/circleAvatar.jpg'),

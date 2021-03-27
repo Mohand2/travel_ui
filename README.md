@@ -1,7 +1,6 @@
-#Flutter Travel UI
+#Flutter Travel UI App
 
-A new Flutter project.
 
-## Getting Started
+
 
 
